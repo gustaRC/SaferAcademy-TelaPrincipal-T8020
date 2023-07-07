@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&display=swap');
+
+:root {
+    --azul-principal: #30ABD6;
+    --azul-secundario:  #399DBF;
+    --azul-escuro: #2C4975;
+    --cinza-claro: #D8D8D8;
+    --cinza-escuro: #999999;
+    --manager-verde: #2A9E34;
+    --producao-laranja: #FB8C00;
+    --transporte-amarelo: #FDE02C;
+    --helpdesk-azul: #18CCFF;
+    --saferAcademy: #34d0ae
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Manrope", "sans-serif";
+    font-weight: 500;
+    text-decoration: none;
+    transition: .4s;
+}
+
+*::selection {
+    background-color: rgba(129, 129, 129, 0.3);
+}
+
+/* CLASS CONTEINER CONTIDA NO MAIN */
+.conteiner {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column ;
+}
+
+/* HEADER */
+.webHead {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABEÇALHO HEADER */
+.topHead {
+    top: 0px;
+    height: 70px;
+    /* padding-bottom: 10px;
+    padding-top: 10px; */
+    width: 100%;
+    background-color: #ffffff;
+    /* border-bottom: 1px solid var(--cinza-escuro); */
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content:center;
+    gap: 60px;
+    align-items: center;
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+#logo-belt {
+    /* margin-right: 20px; */
+    width: 100px;
+}
+
+.searchDiv {
+    width: 50%;
+    border-radius: 30px;
+    border: 2px solid var(--cinza-escuro);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.search-icon{ 
+    width: 30px;
+    height: 30px;
+}
+
+#searchInput {
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    /* border: 2px solid var(--cinza-escuro); */
+    /* padding-right: 15px; */
+    padding-left: 10px;
+    border: 0;
+    margin-left: 5px;
+}
+#searchInput:focus {
+    border: 0px;
+}
+
+.perfilHead {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.iconHead{
+    width: 30px;
+    filter: opacity(0.8);
+}
+
+.iconHead:hover {
+    width: 40px;
+}
+
+#perfilPhoto {          
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+    background: url(./img/icons/user.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid var(--cinza-claro);
+}
+
+#perfilPhoto:hover {
+    width: 40px;
+    height: 40px;
+}
+
+/* BANNER */
+.banner {
+    height: 40vh;
+    width: 100%;
+    transition: .4s;
+    background: url(./img/banners/SaferERP-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* BARRA DE NAVEGAÇÃO DOS SAFERS */
+.navBar {
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #ededed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.navBar a {
+    color: #686868;
+}
+
+.navBar a:hover {
+    filter: brightness(0.6);
+}
+/* LINHA DIVISORIA DOS SAFERS */
+.lineBetween {
+    height: 8vh;
+    width: 2px;
+    background-color: #ededed;
+}
+/* CAMPO DIVS DOS SAFERS  */
+.boxItem-navBar {
+    width: 30vh;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: .4s;
+}
+
+/* REDIMENSIONAR IMGS */
+.boxItem-navBar img{
+    width: 75%;
+}
+
+.boxItem-navBar img:hover {
+    width: 90%;
+    transition: .3s;
+}
+
+/* TRANSIÇÃO DAS IMGS */
+.boxItem-navBar img {
+    transition: .2s;
+}
+
+/* DEFINIR CURSOR COMO POINTER */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* LINHA DE BAIXO SAFER ERP */
+.saferERP-lineBottom {
+    border-left: 0;
+    padding-left: 0vh;
+    border-bottom: 1vh solid var(--azul-secundario);
+}
+
+.saferERP-lineBottom:hover {
+    border-bottom: 0.5vh solid var(--azul-secundario);
+    transition: .15s;
+}
+
+/* LINHA DE BAIXO SAFER PRODUCAO */
+.saferProducao-lineBottom {
+    border-left: 0;
+    padding-left: 0vh;
+    border-bottom: 1vh solid var(--producao-laranja);
+    
+}
+
+.saferProducao-lineBottom:hover {
+    border-bottom: 0.5vh solid var(--producao-laranja);
+    transition: .15s;
+}
+
+/* LINHA DE BAIXO SAFER TRANSPORTE */
+.saferTransporte-lineBottom {
+    border-left: 0;
+    padding-left: 0vh;
+    border-bottom: 1vh solid var(--transporte-amarelo);
+    
+}
+
+.saferTransporte-lineBottom:hover {
+    border-bottom: 0.5vh solid var(--transporte-amarelo);
+    transition: .15s;
+}
+
+/* LINHA DE BAIXO SAFER MANAGER */
+.saferManager-lineBottom {
+    border-left: 0;
+    padding-left: 0vh;
+    border-bottom: 1vh solid var(--manager-verde);
+    
+}
+
+.saferManager-lineBottom:hover {
+    border-bottom: 0.5vh solid var(--manager-verde);
+    transition: .15s;
+}
+
+/* LINHA DE BAIXO SAFER HELPDESK */
+.saferHelpdesk-lineBottom {
+    border-left: 0;
+    padding-left: 0vh;
+    border-bottom: 1vh solid var(--helpdesk-azul);
+    
+}
+
+.saferHelpdesk-lineBottom:hover {
+    border-bottom: 0.5vh solid var(--helpdesk-azul);
+    transition: .15s;
+}
+
+
+/* SECTION DE CONTEUDO */
+.contentBox {
+    padding: 4vh;
+    padding-top: 0;
+    padding-right: 0vh;
+    padding-left: 0vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SUBTITULO DOS TOPICOS */
+.subtittle-H3 {
+    font-size: 30px;
+    color: var(--saferAcademy);
+    font-weight: 700;
+    padding-bottom: 20px;
+    align-self: flex-start;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+/* COR DO PONTO DA LI */
+li {
+    color: #053763;
+}
+
+/* FOOTER DA PÁGINA */
+.webBottom {
+    background-color: var(--azul-escuro);
+    width: 100%;
+    height: 4vh;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    box-shadow: 0px -2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.webBottom p {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+/* SUBTITULO PARA O H4 */
+.subtittle-H4 {
+    font-size: 20px;
+    color: var(--azul-principal);
+    font-weight: 700;
+    padding-bottom: 0.8vh;
+}
+
+.subtittle-H4:hover {
+    text-decoration: underline;
+    filter: brightness(0.8);
+}
+
+/* BOX DA AREA CONTATO/SUPORTE */
+.suporte-box {
+    border-top: 0.5vh solid #ededed;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+    padding-right: 4vh;
+}
+
+.suporte-PagPrincipal {
+    margin-top: 3vh;
+    border-top: 0.5vh solid #ededed;
+    padding: 2vh;
+    padding-top: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.case-content-suporte {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5vh;
+}
+/* CASE INDIVIDUAL DE CADA PARTE DO CONTATO */
+.box-contact {
+    margin-bottom: 2vh;
+}
+
+.box-contact h4{
+    font-size: 18px;
+}
+
+.box-contact p {
+    padding-left: 2.5vh;
+    padding-top: 0.4vh;
+    color: #999999;
+}
+
+.width-safers {
+    width: 160px;
+}
+
+.safers-products {
+    background-color: #ebebeb; 
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px;
+}
+.safers-box {
+    width: 300px;
+    background-color: #ffffff;
+    border: 2px solid #99999921;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.bannerProducts-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    border-radius: 8px;
+}
+
+.bk-saferERP {
+    background-color: #56acc9;
+}
+
+.bk-saferProducao {
+    background: #ffb152;
+}
+
+.bk-saferManager {
+    background-color: #6adf73;
+}
+
+.bk-saferTransporte {
+    background-color: #fcee95;
+}
+
+.bk-saferHelpdesk {
+    background-color: #6fd4f0;
+}
+
+.txt-saferERP-box{
+    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.a-boxSafers {
+    /* margin-left: 65%; */
+    color: #ffffff;
+    background-color: var(--saferAcademy);
+    padding: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 20px; 
+    margin-left: 25%;
+}
+
+.a-boxSafers:hover {
+    /* text-decoration: underline; */
+    background-color: #2abd9d;
+}
+
+#logo-saferAcademy {
+    width: 150px;
+}
