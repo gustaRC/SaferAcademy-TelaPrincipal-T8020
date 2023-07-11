@@ -438,3 +438,45 @@ li {
 #logo-saferAcademy {
     width: 150px;
 }
+
+.video-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* .card-box:first-child .img-card {
+    width: 620px;
+    height: 360px;
+}
+
+.card-box:first-child{
+    background-color: #053763;
+    width: 620px;
+    height: 410px;
+} */
+
+.card-box {
+    cursor: pointer;
+    background-color: #053763;
+    width: 480px;
+    height: 320px;
+}
+
+.img-card {
+    background-color: #18CCFF;
+    width: 480px;
+    height: 270px;
+}
+
+.card-box:hover .img-card {
+    width: 620px;
+    height: 360px;
+}
+
+.card-box:hover{
+    background-color: #053763;
+    width: 620px;
+    height: 410px;
+}
