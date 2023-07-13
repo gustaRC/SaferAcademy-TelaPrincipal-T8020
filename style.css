@@ -27,11 +27,17 @@
     background-color: rgba(129, 129, 129, 0.3);
 }
 
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
 /* CLASS CONTEINER CONTIDA NO MAIN */
 .conteiner {
     min-height: 100vh;
     display: flex;
     flex-direction: column ;
+    overflow: hidden;
 }
 
 /* HEADER */
@@ -90,16 +96,19 @@
     border: 0;
     margin-left: 5px;
 }
-#searchInput:focus {
-    border: 0px;
-}
 
 .perfilHead {
     display: flex;
     gap: 20px;
     align-items: center;
     justify-content: center;
+}
 
+.perfilHead li, .perfilHead a{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .iconHead{
@@ -111,7 +120,7 @@
     width: 40px;
 }
 
-#perfilPhoto {          
+#perfilPhoto {
     width: 30px;
     height: 30px;
     border-radius: 40px;
@@ -126,6 +135,78 @@
     width: 40px;
     height: 40px;
 }
+
+/* #perfilPhoto-submenu {
+    background: url(./img/icons/user.svg);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+
+#username {
+    font-weight: 800;
+    font-size: 18px;
+    color: #686868;
+}   
+
+.dropdown { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    margin-top: 20.5%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.20);
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.seta-dropdown {
+    width: 25px;
+    position: absolute;
+    top: -15px;
+    left: 118px;
+}
+
+.section-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #686868;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.section-dropdown:last-child {
+    border: 0;
+    padding-bottom: 0;
+}
+
+.itens-dropdown {
+    width: 100%;
+    display: flex;
+    align-items: right;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: start;
+    gap: 15px;
+} */
 
 /* BANNER */
 .banner {
@@ -154,6 +235,7 @@
 
 .navBar a {
     color: #686868;
+    font-size: 14px;
 }
 
 .navBar a:hover {
@@ -196,71 +278,6 @@
     cursor: pointer;
 }
 
-/* LINHA DE BAIXO SAFER ERP */
-.saferERP-lineBottom {
-    border-left: 0;
-    padding-left: 0vh;
-    border-bottom: 1vh solid var(--azul-secundario);
-}
-
-.saferERP-lineBottom:hover {
-    border-bottom: 0.5vh solid var(--azul-secundario);
-    transition: .15s;
-}
-
-/* LINHA DE BAIXO SAFER PRODUCAO */
-.saferProducao-lineBottom {
-    border-left: 0;
-    padding-left: 0vh;
-    border-bottom: 1vh solid var(--producao-laranja);
-    
-}
-
-.saferProducao-lineBottom:hover {
-    border-bottom: 0.5vh solid var(--producao-laranja);
-    transition: .15s;
-}
-
-/* LINHA DE BAIXO SAFER TRANSPORTE */
-.saferTransporte-lineBottom {
-    border-left: 0;
-    padding-left: 0vh;
-    border-bottom: 1vh solid var(--transporte-amarelo);
-    
-}
-
-.saferTransporte-lineBottom:hover {
-    border-bottom: 0.5vh solid var(--transporte-amarelo);
-    transition: .15s;
-}
-
-/* LINHA DE BAIXO SAFER MANAGER */
-.saferManager-lineBottom {
-    border-left: 0;
-    padding-left: 0vh;
-    border-bottom: 1vh solid var(--manager-verde);
-    
-}
-
-.saferManager-lineBottom:hover {
-    border-bottom: 0.5vh solid var(--manager-verde);
-    transition: .15s;
-}
-
-/* LINHA DE BAIXO SAFER HELPDESK */
-.saferHelpdesk-lineBottom {
-    border-left: 0;
-    padding-left: 0vh;
-    border-bottom: 1vh solid var(--helpdesk-azul);
-    
-}
-
-.saferHelpdesk-lineBottom:hover {
-    border-bottom: 0.5vh solid var(--helpdesk-azul);
-    transition: .15s;
-}
-
-
 /* SECTION DE CONTEUDO */
 .contentBox {
     padding: 4vh;
@@ -269,19 +286,24 @@
     padding-left: 0vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 /* SUBTITULO DOS TOPICOS */
 .subtittle-H3 {
     font-size: 30px;
     color: var(--saferAcademy);
-    font-weight: 700;
+    font-weight: 800;
     padding-bottom: 20px;
     align-self: flex-start;
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-top: 50px;
+}
+
+.subtittle-H3:first-child {
+    margin-top: 30px;
 }
 
 /* COR DO PONTO DA LI */
@@ -347,20 +369,6 @@ li {
     flex-wrap: wrap;
     column-gap: 5vh;
 }
-/* CASE INDIVIDUAL DE CADA PARTE DO CONTATO */
-.box-contact {
-    margin-bottom: 2vh;
-}
-
-.box-contact h4{
-    font-size: 18px;
-}
-
-.box-contact p {
-    padding-left: 2.5vh;
-    padding-top: 0.4vh;
-    color: #999999;
-}
 
 .width-safers {
     width: 160px;
@@ -393,90 +401,115 @@ li {
     border-radius: 8px;
 }
 
-.bk-saferERP {
-    background-color: #56acc9;
-}
-
-.bk-saferProducao {
-    background: #ffb152;
-}
-
-.bk-saferManager {
-    background-color: #6adf73;
-}
-
-.bk-saferTransporte {
-    background-color: #fcee95;
-}
-
-.bk-saferHelpdesk {
-    background-color: #6fd4f0;
-}
-
-.txt-saferERP-box{
-    margin: 20px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.a-boxSafers {
-    /* margin-left: 65%; */
-    color: #ffffff;
-    background-color: var(--saferAcademy);
-    padding: 30px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    border-radius: 20px; 
-    margin-left: 25%;
-}
-
-.a-boxSafers:hover {
-    /* text-decoration: underline; */
-    background-color: #2abd9d;
-}
-
 #logo-saferAcademy {
     width: 150px;
 }
 
-.video-div {
+.section-ondeParou {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
     gap: 20px;
+    overflow: hidden;
 }
 
-/* .card-box:first-child .img-card {
-    width: 620px;
-    height: 360px;
+.box-ondeParou {
+    width: 400px;
+    height: 320px;
+    background-color: var(--cinza-claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
 }
 
-.card-box:first-child{
-    background-color: #053763;
-    width: 620px;
-    height: 410px;
+.box-ondeParou:first-child {
+    width: 500px;
+}
+
+.box-ondeParou:hover {
+    filter: brightness(0.9);
+}
+
+.bk-subBox-ondeParou {
+    top: 0;
+    width: 100%;
+    height: 250px;
+    background-color: var(--cinza-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .bk-subBox-ondeParou:hover {
+    height: 300px;
 } */
 
-.card-box {
+.subtittle-subBox {
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    font-weight: 800;
+    padding: 10px;
+}
+
+.width-img-ondeParou {
+    width: 85px;
+    filter: opacity(0.5);
+}
+
+.section-secoesVisitadas { 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.row-secoesVisitas {
+    width: 100%;
+    /* height: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row-secoesVisitas div:hover {
+    filter: brightness(0.9);
     cursor: pointer;
-    background-color: #053763;
-    width: 480px;
-    height: 320px;
 }
 
-.img-card {
-    background-color: #18CCFF;
-    width: 480px;
-    height: 270px;
+.subBox-row-secoesVisitas {
+    height: 70px;
+    width: 550px;
+    background-color: var(--cinza-claro);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
 }
 
-.card-box:hover .img-card {
-    width: 620px;
-    height: 360px;
+.box-icon-secoesVisitas {
+    width: 200px;
+    height: 100%;
+    background-color: var(--azul-secundario);
 }
 
-.card-box:hover{
-    background-color: #053763;
-    width: 620px;
-    height: 410px;
+.txt-secoesVisitas {
+    margin-left: 20px;
+}
+
+.section-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card-box {
+    background-color: #ffffff;
+    width: 400px;
+    height: 450px;
+    border-radius: 5px;
+    border: 2px solid var(--cinza-escuro)
+}
+
+.card-box:hover {
+    filter: brightness(0.97);
+    cursor: pointer;
 }
