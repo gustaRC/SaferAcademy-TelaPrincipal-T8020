@@ -222,7 +222,7 @@ textarea:focus, input:focus {
 /* BARRA DE NAVEGAÇÃO DOS SAFERS */
 .navBar {
     width: 100%;
-    height: 40px;
+    height: 45px;
     background-color: #ffffff;
     border-bottom: 2px solid #ededed;
     display: flex;
@@ -282,20 +282,18 @@ textarea:focus, input:focus {
 .contentBox {
     padding: 4vh;
     padding-top: 0;
-    padding-right: 0vh;
-    padding-left: 0vh;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 /* SUBTITULO DOS TOPICOS */
 .subtittle-H3 {
     font-size: 30px;
-    color: var(--saferAcademy);
+    color: #686868;
     font-weight: 800;
     padding-bottom: 20px;
     align-self: flex-start;
@@ -407,12 +405,12 @@ li {
 
 .section-ondeParou {
     display: flex;
-    gap: 20px;
+    gap: 35px;
     overflow: hidden;
 }
 
 .box-ondeParou {
-    width: 400px;
+    width: 380px;
     height: 320px;
     background-color: var(--cinza-claro);
     display: flex;
@@ -422,7 +420,7 @@ li {
 }
 
 .box-ondeParou:first-child {
-    width: 500px;
+    width: 480px;
 }
 
 .box-ondeParou:hover {
@@ -488,6 +486,14 @@ li {
     width: 200px;
     height: 100%;
     background-color: var(--azul-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-icon-secoesVisitas img{
+    width: 50px;
+    filter: opacity(0.6);
 }
 
 .txt-secoesVisitas {
@@ -495,7 +501,16 @@ li {
 }
 
 .section-card {
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
     justify-content: space-between;
@@ -505,11 +520,143 @@ li {
     background-color: #ffffff;
     width: 400px;
     height: 450px;
-    border-radius: 5px;
-    border: 2px solid var(--cinza-escuro)
+    /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: 50px 5px 50px 5px;
+    border: 2px solid var(--cinza-escuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: black;
 }
 
 .card-box:hover {
-    filter: brightness(0.97);
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.title-card {
+    display: flex;
+    align-items: center;
+}
+
+.title-card h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.icon-title-card {
+    width: 250px;
+}
+
+.saferERP-card-box:hover {
+    border: 2px solid var(--azul-secundario);
+}
+
+.saferProducao-card-box:hover {
+    border: 2px solid var(--producao-laranja);
+}
+
+.saferManager-card-box:hover {
+    border: 2px solid var(--manager-verde);
+}
+
+.saferTransporte-card-box:hover {
+    border: 2px solid var(--transporte-amarelo);
+}
+
+.saferHelpDesk-card-box:hover {
+    border: 2px solid var(--helpdesk-azul);
+}
+
+.card-box button {
+    padding: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--cinza-claro);
+    border: 2px solid #6b6b6b;
+    color: #6b6b6b;
+    border: 0;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+.card-box button:hover {
+    filter: brightness(0.9);
+}
+
+.section-newsletter {
+    background-color: var(--cinza-claro);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-item-newsletter {
+    background-color: #686868;
+    width: 90%;
+    height: 80%;
+}
+
+.box-item-newsletter:hover {
+    filter: brightness(0.9);
+}
+
+.section-duvida {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-duvida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-duvida div {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.form-duvida textarea {
+    width: 100%;
+}
+
+.input-duvida {
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    border: 2px solid #6868684f;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.input-area {
+    font-size: 16px;
+    width: 400px;
+    height: 200px;
+    resize: none;
+    border-radius: 30px;
+    border: 2px solid #6868684f;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
 }
