@@ -51,21 +51,17 @@ input:focus {
 .topHead {
   top: 0px;
   height: 70px;
-  /* padding-bottom: 10px;
-    padding-top: 10px; */
   width: 100%;
   background-color: #ffffff;
-  /* border-bottom: 1px solid var(--cinza-escuro); */
   display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: center;
+  justify-content: space-between;
   gap: 60px;
   align-items: center;
-  /* padding-left: 5%;
-    padding-right: 5%; */
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.1);
   z-index: 2;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 #logo-belt {
@@ -74,7 +70,7 @@ input:focus {
 }
 
 .searchDiv {
-  width: 50%;
+  width: 100%;
   border-radius: 30px;
   border: 2px solid var(--cinza-escuro);
   display: flex;
@@ -215,16 +211,19 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #313131;
+  background-color: transparent;
 }
 
 .banner img {
-  height: 40vh;
-  /* width: 100%; */
+  aspect-ratio: 16/9;
+  height: 350px;
+  width: 100%;
   transition: 0.4s;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 /* BARRA DE NAVEGAÇÃO DOS SAFERS */
@@ -288,12 +287,15 @@ input:focus {
 
 /* SECTION DE CONTEUDO */
 .contentBox {
-  padding: 4vh;
-  padding-top: 0;
+/* superior | direita | inferior | esquerda */
+  padding: 2vh 0 4vh 0;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
+}
+
+.marginContent {
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -413,12 +415,12 @@ li {
 
 .section-ondeParou {
   display: flex;
-  gap: 20px;
+  gap: 21px;
   overflow: hidden;
 }
 
 .box-ondeParou {
-  width: 380px;
+  width: 340px;
   height: 320px;
   background-color: var(--cinza-claro);
   display: flex;
@@ -428,7 +430,7 @@ li {
 }
 
 .box-ondeParou:first-child {
-  width: 480px;
+  width: 440px;
 }
 
 .box-ondeParou:hover {
@@ -483,7 +485,7 @@ li {
 
 .subBox-row-secoesVisitas {
   height: 70px;
-  width: 550px;
+  width: 480px;
   background-color: var(--cinza-claro);
   display: flex;
   align-items: center;
@@ -511,17 +513,91 @@ li {
 .section-card {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card {
+.itens-selection {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 50px;
+  width: 20%;
+  height: auto;
+  border-left: 8px solid var(--azul-escuro);
+  padding-left: 100px;
+}
+
+.itens-selection div {
+  height: 80px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.itens-selection img {
+  width: 250px;
+}
+
+.itens-selection img:hover {
+  width: 300px;
+  cursor: pointer;
+}
+
+.selected-box {
+  width: 60%;
+  height: 650px;
+  background: url(img/logoBelt-cinza.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  color: #021b31;
+}
+
+.selected-box h2{
+  font-size: 35px;
+  width: 70%;
+  font-weight: 700;
+}
+
+.selected-box a {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected-box p {
+  width: 60%;
+  font-size: 20px;
+}
+
+.selected-button {
+  color: var(--azul-escuro);
   width: 100%;
-  justify-content: space-between;
+  height: 40px;
+  border: 2px solid var(--azul-escuro);
+  border-radius: 0;
+  background-color: #fafafa;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.selected-button:hover {
+  cursor: pointer;
+  background-color: var(--azul-escuro);
+  color: #fafafa;
+}
+
+.subBox-iten-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-box {
@@ -610,7 +686,7 @@ li {
 
 .box-item-newsletter {
   background-color: #686868;
-  width: 90%;
+  width: 100%;
   height: 80%;
 }
 
@@ -654,6 +730,7 @@ li {
   margin-top: 5px;
   margin-bottom: 10px;
   font-size: 16px;
+  transition: 0.2s;
 }
 
 .input-duvida:focus {
